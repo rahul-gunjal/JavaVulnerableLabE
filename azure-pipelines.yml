@@ -55,7 +55,7 @@ jobs:
       enableDependencyScan: true
 
       dependencyServerURL: 2d7c733d-cb24-4f72-af8c-55bbbdeb3c9e
-      scaTeam: CxServer
+      scaTeam: /CxServer
 
       isEnableScaResolver: true
 
