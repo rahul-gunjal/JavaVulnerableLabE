@@ -1,0 +1,63 @@
+# Starter pipeline
+
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+
+# Add steps that build, run tests, deploy, and more:
+
+# https://aka.ms/yaml
+
+ 
+
+trigger:
+
+- master
+
+ 
+
+variables:
+
+- name: System.Debug
+
+  value: true
+
+ 
+
+jobs:
+
+- job: Job_1
+
+  displayName: Agent job 1
+
+  pool:
+
+    name: Default
+
+  steps:
+
+  - checkout: self
+
+    clean: true
+
+    fetchTags: false
+
+  - task: Application security testing@2023
+
+    displayName: TestADOYamlScript
+
+    inputs:
+
+      projectName: TestADOYamlScript1
+
+      enableSastScan: false
+
+      fullScansScheduled: false
+
+      enableDependencyScan: true
+
+      dependencyServerURL: 2d7c733d-cb24-4f72-af8c-55bbbdeb3c9e
+
+      isEnableScaResolver: true
+
+      #pathToScaResolver : 'C:\SCAResolver\ScaResolver-win641'
+
+      scaResolverAddParameters: -s C:\SourceCode\JavaVulnerableLabE-master -n AdoScaResolverTest --resolver-result-path C:\ADO_Plugin_Testing\ScaResolverResultes\SRTest.json --log-level Debug
