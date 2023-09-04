@@ -59,6 +59,6 @@ jobs:
 
       isEnableScaResolver: true
 
-      #pathToScaResolver : 'C:\SCAResolver\ScaResolver-win641'
+      pathToScaResolver : 'C:\ADO_Plugin_Testing\ScaResolver-win64'
 
       scaResolverAddParameters: -s C:\SourceCode\JavaVulnerableLabE-master -n AdoScaResolverYamlTest --resolver-result-path C:\ADO_Plugin_Testing\ScaResolverResultes\SRYamlTest.json --log-level Debug
