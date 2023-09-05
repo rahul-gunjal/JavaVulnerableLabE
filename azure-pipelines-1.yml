@@ -12,15 +12,11 @@ trigger:
 
 - master
 
- 
-
 variables:
 
 - name: System.Debug
 
   value: true
-
- 
 
 jobs:
 
@@ -49,6 +45,7 @@ jobs:
       projectName: AdoBuilds_2023.3.4_SanityTestWithYaml
 
       enableSastScan: true
+      CheckmarxService: 881329b2-47c1-4fa3-b8b9-b98f6c593b97
       fullTeamName: CxServer
 
       fullScansScheduled: false
