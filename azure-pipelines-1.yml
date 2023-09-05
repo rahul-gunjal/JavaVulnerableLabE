@@ -58,6 +58,6 @@ jobs:
 
       isEnableScaResolver: false
 
-      #pathToScaResolver : 'C:\SCAResolver\ScaResolver-win641'
+      pathToScaResolver : 'C:\ADO_Plugin_Testing\Ado_ScaResolver\ScaResolver-win64'
 
-      #scaResolverAddParameters: -s D:\Repo\cxvscode -n CheckmarxTest --resolver-result-path C:\SCAResolver\SCA Result\a.json  --log-level Debug
+      scaResolverAddParameters: -s C:\SourceCode\JavaVulnerableLabE-master -n AdoScaResolver_SanityTestWithYaml --resolver-result-path C:\ADO_Plugin_Testing\Ado_ScaResolver\ScaResolverResults\AdoScaResolver_SanityTestWithYaml.json --log-level Debug
