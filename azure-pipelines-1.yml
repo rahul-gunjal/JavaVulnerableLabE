@@ -1,0 +1,66 @@
+# Starter pipeline
+
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+
+# Add steps that build, run tests, deploy, and more:
+
+# https://aka.ms/yaml
+
+ 
+
+trigger:
+
+- master
+
+ 
+
+variables:
+
+- name: System.Debug
+
+  value: true
+
+ 
+
+jobs:
+
+- job: Job_1
+
+  displayName: Agent job 1
+
+  pool:
+
+    name: Default
+
+  steps:
+
+  - checkout: self
+
+    clean: true
+
+    fetchTags: false
+
+  - task: Application security testing@2023
+
+    displayName: AdoBuilds_2023.3.4_SanityTest_WithYaml
+
+    inputs:
+
+      projectName: AdoBuilds_2023.3.4_SanityTestWithYaml
+
+      enableSastScan: true
+      fullTeamName: CxServer
+
+      fullScansScheduled: false
+
+      enableDependencyScan: true
+
+      dependencyServerURL: 2d7c733d-cb24-4f72-af8c-55bbbdeb3c9e
+
+      scaTeam: /CxServer
+
+      isEnableScaResolver: false
+
+      #pathToScaResolver : 'C:\SCAResolver\ScaResolver-win641'
+
+      #scaResolverAddParameters: -s D:\Repo\cxvscode -n CheckmarxTest --resolver-result-path C:\SCAResolver\SCA Result\a.json  --log-level Debug
