@@ -56,7 +56,7 @@ jobs:
 
       scaTeam: /CxServer
 
-      isEnableScaResolver: false
+      isEnableScaResolver: true
 
       pathToScaResolver : 'C:\ADO_Plugin_Testing\Ado_ScaResolver\ScaResolver-win64'
 
