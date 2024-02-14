@@ -1,0 +1,32 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+ 
+trigger:
+- master
+ 
+variables:
+- name: System.Debug
+  value: true
+ 
+jobs:
+- job: Job_1
+  displayName: Agent job 1
+  pool:
+    name: Default
+  steps:
+  - checkout: self
+    clean: true
+    fetchTags: false
+  - task: Application security testing@2023
+    displayName: Application security testing
+    inputs:
+      projectName: ADO-SastScaScanViaYaml
+      enableSastScan: true
+      fullScansScheduled: false
+      enableDependencyScan: true
+      #dependencyServerURL: b39e829f-81c9-478e-b35b-20bec8018f9e
+      isEnableScaResolver: false
+      pathToScaResolver : ''
+      #scaResolverAddParameters: -s D:\Repo\cxvscode -n CheckmarxTest --resolver-result-path C:\SCAResolver\SCA Result\a.json  --log-level Debug
