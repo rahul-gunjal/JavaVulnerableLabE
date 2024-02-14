@@ -26,7 +26,7 @@ jobs:
       enableSastScan: true
       fullScansScheduled: false
       enableDependencyScan: true
-      #dependencyServerURL: b39e829f-81c9-478e-b35b-20bec8018f9e
+      dependencyServerURL: b39e829f-81c9-478e-b35b-20bec8018f9e
       isEnableScaResolver: false
       pathToScaResolver : ''
       #scaResolverAddParameters: -s D:\Repo\cxvscode -n CheckmarxTest --resolver-result-path C:\SCAResolver\SCA Result\a.json  --log-level Debug
