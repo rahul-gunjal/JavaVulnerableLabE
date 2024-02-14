@@ -41,7 +41,7 @@ jobs:
     displayName: AdoBuilds_2023.3.4_SanityTest_WithYaml
 
     inputs:
-      projectName: 'ADOYAML'
+      projectName: 'YAML02'
       enableProxy: false
       enableSastScan: true
       CheckmarxService: 'Sast95'
