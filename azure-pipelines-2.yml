@@ -1,4 +1,17 @@
 # Starter pipeline
+- task: Application security testing@2023
+  inputs:
+    projectName: 'ADO-SastScaScaWithYaml'
+    enableProxy: false
+    enableSastScan: true
+    CheckmarxService: 'Sast95'
+    fullTeamName: 'CxServer'
+    incScan: false
+    generatePDFReport: true
+    enableDependencyScan: true
+    dependencyServerURL: 'ScaCredential'
+    scaTeam: 'CxServer'
+    includeSource: true
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
