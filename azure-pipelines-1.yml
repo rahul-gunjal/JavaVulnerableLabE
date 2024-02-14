@@ -41,23 +41,14 @@ jobs:
     displayName: AdoBuilds_2023.3.4_SanityTest_WithYaml
 
     inputs:
-
-      projectName: AdoBuilds_2023.3.4_SanityTestWithYaml
-
+      projectName: 'ADOYAML'
+      enableProxy: false
       enableSastScan: true
-      CheckmarxService: 881329b2-47c1-4fa3-b8b9-b98f6c593b97
-      fullTeamName: CxServer
-
-      fullScansScheduled: false
-
+      CheckmarxService: 'Sast95'
+      fullTeamName: 'CxServer'
+      incScan: false
+      generatePDFReport: true
       enableDependencyScan: true
-
-      dependencyServerURL: 2d7c733d-cb24-4f72-af8c-55bbbdeb3c9e
-
-      scaTeam: /CxServer
-
-      isEnableScaResolver: true
-
-      pathToScaResolver : 'C:\ADO_Plugin_Testing\Ado_ScaResolver\ScaResolver-win64'
-
-      scaResolverAddParameters: -s C:\SourceCode\JavaVulnerableLabE-master -n AdoScaResolver_SanityTestWithYaml --resolver-result-path C:\ADO_Plugin_Testing\Ado_ScaResolver\ScaResolverResults\AdoScaResolver_SanityTestWithYaml.json --log-level Debug
+      dependencyServerURL: 'ScaCredential'
+      scaTeam: 'CxServer'
+      includeSource: true
